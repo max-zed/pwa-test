@@ -1,0 +1,21 @@
+* {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+body {
+    font-family: system-ui;
+    text-align: center;
+    margin-top: 40vh;
+}
+
+button {
+    font-size: 20px;
+    padding: 15px 25px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+button.pressed {
+    transform: scale(0.96);
+}  

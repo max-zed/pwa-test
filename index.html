@@ -1,69 +1,23 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Test PWA</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-
-  <link rel="manifest" href="manifest.json">
-
-  <style>
-    * {
-        -webkit-tap-highlight-color: transparent;
-        touch-action: manipulation;
-    }
-
-    body {
-      font-family: system-ui;
-      text-align: center;
-      margin-top: 40vh;
-    }
-
-    button {
-      font-size: 20px;
-      padding: 15px 25px;
-      appearance: none;
-      -webkit-appearance: none;
-    }
-
-    button.pressed {
-  transform: scale(0.96);
-}
-  </style>
+	<meta charset="UTF-8">
+	<title>FTL Calculator</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">  
+	<link rel="manifest" href="manifest.json">
+	<link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
 <h1>Meine Offline-PWA</h1>
 
-<button id="btn">Klick mich</button>
+<button id="btn">Klick mich nicht</button>
 
 <p id="out"></p>
 
-<script>
-    const btn = document.getElementById("btn");
-
-btn.addEventListener("touchstart", () => {
-  btn.classList.add("pressed");
-}, { passive: true });
-
-btn.addEventListener("touchend", () => {
-  btn.classList.remove("pressed");
-  clicked();
-});
-
-function clicked() {
-  document.getElementById("out").textContent =
-    "Button funktioniert 🎉";
-}
-
-// Service Worker registrieren
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js");
-}
-</script>
+<script src="index.js"></script>
 
 </body>
 </html>
