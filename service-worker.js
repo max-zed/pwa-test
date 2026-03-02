@@ -1,5 +1,4 @@
-/*
-const CACHE = "test-pwa-v1";
+const CACHE = "ftl-calc";
 
 self.addEventListener("install", event => {
   event.waitUntil(
@@ -20,4 +19,15 @@ self.addEventListener("fetch", event => {
     })
   );
 });
-*/
+
+self.addEventListener("activate", event => {
+  event.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(
+        keys
+          .filter(key => key !== CACHE)
+          .map(key => caches.delete(key))
+      )
+    )
+  );
+});
