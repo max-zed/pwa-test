@@ -9,8 +9,17 @@ body {
     -webkit-font-smoothing: antialiased;
     
     text-align: center;
-    margin-top: 40vh;
+    margin-top: 20vh;
     
+}
+
+#time-zone-select {
+    visibility: hidden;
+}
+
+#time-zone-label {
+    visibility: hidden;
+
 }
 
 button {

@@ -12,10 +12,61 @@
 <body>
 
 <button onclick="update_app()" id="update-btn">Update</button>
-<h2>Check In Time</h2><input id="check-in-datetime" type="datetime-local" placeholder="DD.MM.JJJJ HH:MM"><span>UTC</span>
+<h2>
+	Check In Time
+	<input id="check-in-datetime" type="datetime-local" placeholder="DD.MM.JJJJ HH:MM">
+	<select id="check-in-timezone-select">
+		<option value="UTC" selected>UTC</option>
+		<option value="local">Local</option>
+	</select>
+</h2>
+<p id="time-zone-label">
+	Time Zone:
+	<select id="time-zone-select">
+		<option value="-12">-12:00</option>
+		<option value="-11">-11:00</option>
+		<option value="-10">-10:00</option>
+		<option value="-9:30">-09:30</option>
+		<option value="-9">-09:00</option>
+		<option value="-8">-08:00</option>
+		<option value="-7">-07:00</option>
+		<option value="-6">-06:00</option>
+		<option value="-5">-05:00</option>
+		<option value="-4">-04:00</option>
+		<option value="-3:30">-03:30</option>
+		<option value="-3">-03:00</option>
+		<option value="-2">-02:00</option>
+		<option value="-1">-01:00</option>
+		<option value="0" selected>00:00 UTC</option>
+		<option value="+1">+01:00</option>
+		<option value="+2">+02:00</option>
+		<option value="+3">+03:00</option>
+		<option value="+3">+03:30</option>
+		<option value="+4">+04:00</option>
+		<option value="+4:30">+04:30</option>
+		<option value="+5">+05:00</option>
+		<option value="+5:30">+05:30</option>
+		<option value="+5:45">+05:45</option>
+		<option value="+6">+06:00</option>
+		<option value="+6:30">+06:30</option>
+		<option value="+7">+07:00</option>
+		<option value="+8">+08:00</option>
+		<option value="+8:45">+08:45</option>
+		<option value="+9">+09:00</option>
+		<option value="+9:30">+09:30</option>
+		<option value="+10">+10:00</option>
+		<option value="+10:30">+10:30</option>
+		<option value="+11">+11:00</option>
+		<option value="+12">+12:00</option>
+		<option value="+12:45">+12:45</option>
+		<option value="+13">+13:00</option>
+		<option value="+14">+14:00</option>
+	</select>
+</p>
 
 <h2>Number of legs flown</h2><input id="leg-count" type="number"><span>Legs</span>
-
+<br>
+<br>
 <button onclick="calculate_final_data()">Calculate</button>
 
 <h3>Latest On-Block:</h3><span id="on-block-time"></span>
